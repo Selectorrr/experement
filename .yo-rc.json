@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "experement",
+    "packageName": "net.org.selector.experement",
+    "packageFolder": "net/org/selector/experement",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": false,
+    "enableSocialSignIn": true,
+    "rememberMeKey": "a86b4ea400ecf98481e5b6a5202374c253e31f22",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}

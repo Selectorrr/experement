@@ -1,0 +1,7 @@
+experement-mongodb:
+  container_name: experement-mongodb
+  image: mongo:3.0.7
+  # volumes:
+  #   - ~/volumes/jhipster/experement/mongodb/:/data/db/
+  ports:
+    - "27017:27017"
