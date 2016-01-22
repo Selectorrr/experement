@@ -49,6 +49,10 @@ module.exports = function (grunt) {
             ngconstant: {
                 files: ['Gruntfile.js', 'pom.xml'],
                 tasks: ['ngconstant:dev']
+            },
+            babel: {
+                files: ['src/main/jsx/**/*.jsx'],
+                tasks: ['babel:jsx']
             }
         },
         autoprefixer: {
@@ -314,6 +318,21 @@ module.exports = function (grunt) {
                     VERSION: parseVersionFromPomXml()
                 }
             }
+        },
+        babel: {
+            options: {
+                plugins: ['transform-react-jsx'], // npm install babel-plugin-transform-react-jsx
+                presets: ['es2015', 'react'] // npm install babel-preset-es2015 babel-preset-react
+            },
+            jsx: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/main/jsx',
+                    src: ['**/*JSX.jsx'],
+                    dest: 'src/main/webapp/scripts/',
+                    ext: '.js'
+                }]
+            }
         }
     });
 
@@ -357,6 +376,6 @@ module.exports = function (grunt) {
         'htmlmin'
     ]);
 
-    
+
     grunt.registerTask('default', ['serve']);
 };
